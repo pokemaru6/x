@@ -1,0 +1,13 @@
+name: 24時間放置システム
+on:
+  schedule:
+    - cron: '*/30 * * * *' # 30分おきに自動実行
+  workflow_dispatch: # 手動実行ボタン
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Pythonを実行する
+        run: python bot.py
