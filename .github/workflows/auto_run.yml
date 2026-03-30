@@ -11,3 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Pythonを実行する
         run: python bot.py
+        - name: ライブラリをインストール
+          run: pip install requests  # ←これを追加！
+        - name: Pythonを実行する
+          run: python bot.py
